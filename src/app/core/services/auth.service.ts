@@ -39,7 +39,7 @@ export class AuthService {
     }).pipe(
       tap((data: {token: string}) => {
         const token = data.token;
-        this.tokenService.saveToken()
+        this.tokenService.saveToken(token)
       })
     )
   }
